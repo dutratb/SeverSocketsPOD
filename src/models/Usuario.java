@@ -1,27 +1,19 @@
 package models;
 
-import java.util.ArrayList;
-
 public class Usuario {
-	private ArrayList<Mensagem> mensagens;
+	private String nome;
 
-	public Usuario() {
-		super();
-		this.mensagens = new ArrayList<Mensagem>();
+	public Usuario(String nome) {
+		this.nome = nome;
 	}
 
-	public ArrayList<Mensagem> getMensagens() {
-		return mensagens;
-	}
-
-	public void setMensagens(ArrayList<Mensagem> mensagens) {
-		this.mensagens = mensagens;
+	public String getNome() {
+		return nome;
 	}
 
 	@Override
 	public String toString() {
-		return "Usuario [mensagens=" + mensagens + "]";
+		return String.format("%s", this.nome);
 	}
-	
 
 }
